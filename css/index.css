@@ -6,6 +6,7 @@ body {
   max-width: 90%;
   margin: 0 auto;
   padding: 0 16px;
+  position: relative;
 }
 
 .navbar {
@@ -39,6 +40,18 @@ body {
   width: 24px;
   object-fit: cover;
   height: 24px;
+}
+
+.navbar .hamburger {
+  display: none;
+}
+
+.navbar .bar {
+  background-color: #000;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+  border-radius: 10px;
 }
 
 .project-grid {
@@ -149,11 +162,34 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .navbar .right {
+    display: none;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .footer {
     padding: 20px;
     font-size: 14px;
   }
   .project-grid {
+    margin-top: 80px;
     grid-template-areas:
       "eth eth"
       "alphabet alphabet"
