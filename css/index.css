@@ -186,6 +186,10 @@ body {
     justify-content: center;
   }
 
+  .navbar .hamburger:hover {
+    cursor: pointer;
+  }
+
   .footer {
     padding: 20px;
     font-size: 14px;
@@ -202,13 +206,18 @@ body {
     position: fixed;
     z-index: 2;
     top: 0;
-    right: 0;
+    right: -160px;
     padding: 16px;
+    transition: all 0.3s;
   }
 
   .mobileNav img {
     width: 24px;
     height: 24px;
+  }
+
+  .openDrawer {
+    transform: translateX(-160px);
   }
 
   .mobileNav a {
@@ -239,17 +248,17 @@ body {
 }
 
 .animateBar1 {
-  animation: flipBar1 1s;
+  animation: flipBar1 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animateBar2 {
-  animation: fadeBar2 1s;
+  animation: fadeBar2 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animateBar3 {
-  animation: flipBar3 1s;
+  animation: flipBar3 0.5s;
   animation-fill-mode: forwards;
 }
 
